@@ -71,17 +71,11 @@
                       </div>
 
                       <div class="pay-way">
-                        <el-button type="primary" @click="alipay(scope.item)" size="small" v-if="payWays['alipay']">
-                          <i class="iconfont icon-alipay"></i> 支付宝
-                        </el-button>
+                        
                         <el-button type="success" @click="huPiPay(scope.item)" size="small" v-if="payWays['hupi']">
-                          <span v-if="payWays['hupi']['name'] === 'wechat'"><i class="iconfont icon-wechat-pay"></i> 微信</span>
-                          <span v-else><i class="iconfont icon-alipay"></i> 支付宝</span>
+                          <span><i class="iconfont icon-alipay"></i> 聚合支付</span>
                         </el-button>
 
-                        <el-button type="success" @click="PayJs(scope.item)" size="small" v-if="payWays['payjs']">
-                          <span><i class="iconfont icon-wechat-pay"></i> 微信</span>
-                        </el-button>
                       </div>
                     </div>
                   </div>
@@ -293,7 +287,7 @@ const alipay = (row) => {
 
 // 虎皮椒支付
 const huPiPay = (row) => {
-  payName.value = payWays.value["hupi"]["name"] === "wechat" ? '微信' : '支付宝'
+  payName.value = payWays.value["hupi"]["name"] === "wechat" ? '微信' : '聚合支付'
   curPay.value = "hupi"
   amount.value = (row.price - row.discount).toFixed(2)
   if (!isLogin.value) {

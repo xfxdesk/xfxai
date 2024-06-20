@@ -20,6 +20,10 @@
          <a @click="router.push('/xmind')" color="#FFFD55" style="color:#333333" :dark="false">
            <span>导图</span>
          </a>
+		 
+		 <a href="/nav" color="#FFFD55" style="color:#333333" :dark="false">
+		   <span>ai导航</span>
+		 </a>
         </div> 
       </el-menu>
     </div>
@@ -104,7 +108,7 @@
 	 <div class="right">
 			<a href="/#home"><span class="link mt15"> 首页 </span></a>
 			<a href="/#g1"><span class="link mt35"> 特性 </span></a>
-			<a href="/nav"><span class="link mt35"> 分享 </span></a>
+			<a href="/nav"><span class="link mt35"> ai导航 </span></a>
 		</div>
 	</section>
 	

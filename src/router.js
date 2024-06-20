@@ -199,7 +199,7 @@ const routes = [
     {
         name: 'mobile',
         path: '/mobile',
-        meta: {title: 'xfxAI v4.0'},
+        meta: {title: 'xfxai v4.0'},
         component: () => import('@/views/mobile/Home.vue'),
         redirect: '/mobile/chat',
         children: [

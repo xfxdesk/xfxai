@@ -248,9 +248,9 @@ const data = ref({
 })
 const enableMobile = ref(false)
 const enableEmail = ref(false)
-const enableUser = ref(false)
-const enableRegister = ref(false)
-const activeName = ref("mobile")
+const enableUser = ref(true)
+const enableRegister = ref(true)
+const activeName = ref("username")
 const wxImg = ref("/images/wx.png")
 // eslint-disable-next-line no-undef
 const emits = defineEmits(['hide', 'success']);

@@ -46,17 +46,11 @@
           <h4 class="title">
             <span>{{ item.name }}</span>
             <div class="buy-btn">
-              <van-button type="primary" @click="pay('alipay',item)" size="small" v-if="payWays['alipay']">
-                <i class="iconfont icon-alipay"></i> 支付宝
-              </van-button>
+             
               <van-button type="success" @click="pay('hupi',item)" size="small" v-if="payWays['hupi']">
-                <span v-if="payWays['hupi']['name'] === 'wechat'"><i class="iconfont icon-wechat-pay"></i> 微信</span>
-                <span v-else><i class="iconfont icon-alipay"></i> 支付宝</span>
+                <span><i class="iconfont icon-alipay"></i> 聚合支付</span>
               </van-button>
 
-              <van-button type="success" @click="pay('payjs',item)" size="small" v-if="payWays['payjs']">
-                <span><i class="iconfont icon-wechat-pay"></i> 微信</span>
-              </van-button>
             </div>
           </h4>
 
@@ -249,8 +243,8 @@ const pay = (payWay, item) => {
     product_id: item.id,
     user_id: loginUser.value.id
   }).then(res => {
-    // console.log(res.data)
-    location.href = res.data
+    console.log(res.data)
+    window.location.href = res.data
   }).catch(e => {
     showFailToast("生成支付订单失败：" + e.message)
   })

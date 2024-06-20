@@ -135,7 +135,7 @@
 .member .inner .product-box .list-box .product-item .product-info .pay-way {
   padding: 10px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .member .inner .product-box .list-box .product-item .product-info .pay-way .iconfont {
   margin-right: 5px;

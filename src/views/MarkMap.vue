@@ -110,7 +110,7 @@ const leftBoxHeight = ref(window.innerHeight - 105)
 const rightBoxHeight = ref(window.innerHeight - 85)
 
 const prompt = ref("")
-const text = ref(`# xfxAI 助手
+const text = ref(`# xfxai 助手
 
 - 完整的开源系统，前端应用和后台管理系统皆可开箱即用。
 - 基于 Websocket 实现，完美的打字机体验。
