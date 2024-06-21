@@ -28,7 +28,7 @@
       </el-menu>
     </div>
     <section class="content sec"  id="home">
-      <h1 class="navtitle">欢迎使用 {{ title }}</h1>
+      <h1 class="navtitle" id="htitle">欢迎使用 {{ title }}</h1>
       <p class="slogan">{{ slogan }}</p>
       <el-button class="begin" @click="router.push('/chat')" color="#ffffff" style="color:#007bff;" :dark="false">
         <span>开始智能生成</span>
@@ -62,7 +62,7 @@
 		    <span>开始智能生成</span>
 		  </el-button>
 	  </div>
-	  <div class="right">
+	  <div class="right" id="b1">
 		  <el-image src="/images/featurev0.webp"  style="width: 668px;height: 452px;margin:0 auto;"></el-image>
 		  
 	  </div>
@@ -70,7 +70,7 @@
 	</section>
 	
 	<section class="des1"  id="g2">
-	  <div class="left">
+	  <div class="left"  id="b2">
 		 <el-image src="/images/featurev1.webp"  style="width: 668px;height: 452px;margin:0 auto;"></el-image>
 		 
 	  </div>
@@ -94,18 +94,18 @@
 		    <span>开始智能生成</span>
 		  </el-button>
 	  </div>
-	  <div class="right">
+	  <div class="right"  id="b3">
 		  <el-image src="/images/featurev4.webp"  style="width: 668px;height: 452px;margin:0 auto;"></el-image>
 		  
 	  </div>
 	 
 	</section>
 	
-	<section class="des1">
+	<section class="des1" id="g4">
 	  <div class="labels">
 		 <span class="description">欢迎来到小飞侠AI——您的全方位AI学习与办公伙伴！</span>
 	  </div>
-	 <div class="right">
+	 <div class="right"  id="b4">
 			<a href="/#home"><span class="link mt15"> 首页 </span></a>
 			<a href="/#g1"><span class="link mt35"> 特性 </span></a>
 			<a href="/nav"><span class="link mt35"> ai导航 </span></a>
@@ -216,6 +216,44 @@ const init = () => {
   align-items baseline
   padding-top 60px
   
+  @media screen and (max-width:520px) {
+		#b1 {
+			display:none; 
+		}
+		#b2 {
+			display:none; 
+		}
+		#b3 {
+			display:none;
+		}
+		#b4 {
+			display:none; 
+		}
+		#g1 {
+			margin: 0px auto;
+			padding: 20px 10px;
+		}
+		#g2 {
+			margin: 0px auto;
+			padding: 20px 10px;
+		}
+		#g3 {
+			margin: 0px auto;
+			padding: 20px 10px;
+		}
+		#g4 {
+			margin: 0px auto;
+			padding: 20px 10px;
+			margin-bottom: 100px;
+		}
+		#htitle{
+			font-size: 4rem;
+		}
+		.left span{
+			font-size: 28px;
+		}
+  }
+	
   .des1{
 	  width:100%;
 	  padding-bottom: 100px;
@@ -254,7 +292,7 @@ const init = () => {
 		  justify-content: flex-start
 		  align-content: flex-start
 		  .title{
-		  		  font-size: 36px;
+		  		  font-size: 30px;
 		  		  font-weight: bold;
 		  		  color: #333333;
 				  margin-top: 20px;
@@ -285,8 +323,11 @@ const init = () => {
 		  justify-content: flex-start
 		  align-content: flex-start
 		  margin: 0 auto
+		  
+
+		  
 		  .title{
-		  		  font-size: 36px;
+		  		  font-size: 30px;
 		  		  font-weight: bold;
 		  		  color: #333333;
 		  				  margin-top: 20px;
